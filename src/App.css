@@ -36,3 +36,16 @@
     transform: rotate(360deg);
   }
 }
+
+.btn-brand{
+  background-image: linear-gradient(75deg, #19D3AE, #0fcfec);
+  border-color: transparent;
+  text-transform: uppercase;
+  font-weight: 600;
+  width: 100%;
+  justify-items: center;
+}
+
+.text-brand{
+  color: #1CC7C1;
+}
