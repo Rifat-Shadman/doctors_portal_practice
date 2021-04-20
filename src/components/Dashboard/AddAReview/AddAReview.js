@@ -26,7 +26,7 @@ const AddAReview = () => {
         fetch('http://localhost:5000/addAReview', {
             method: 'POST',
             headers: {
-                "content-type": "application/json"
+                "content-type": "application/json" 
             },
             body: JSON.stringify(formData)
         })
