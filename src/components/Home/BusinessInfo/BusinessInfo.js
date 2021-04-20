@@ -5,20 +5,20 @@ import { faClock, faMapPin, faPhone } from '@fortawesome/free-solid-svg-icons'
 
 const infosData = [
     {
-        title: 'Opening Hours',
-        description: 'Lorem ipsum dolor sit amet consectetur.',
+        title: 'Article Writing',
+        description: 'Broaden the Curious Mind',
         icon: faClock,
         background: 'primary'
     },
     {
-        title: 'Visit our Location',
-        description: 'Brookyn, NY 10003, USA',
+        title: 'Copywriting',
+        description: 'Know the World',
         icon: faMapPin,
         background: 'dark'
     },
     {
-        title: 'Call Us Now',
-        description: '+15697854422',
+        title: 'Infographics',
+        description: 'Convey the knowledge',
         icon: faPhone,
         background: 'primary'
     }

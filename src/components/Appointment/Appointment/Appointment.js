@@ -12,7 +12,7 @@ const Appointment = () => {
     return (
         <div>
             <Navbar></Navbar>
-            <AppointmentHeader handleDateChange={handleDateChange}></AppointmentHeader>
+            {/* <AppointmentHeader handleDateChange={handleDateChange}></AppointmentHeader> */}
             <BookAppointment date={selectedDate}></BookAppointment>
             <Footer></Footer>
         </div>

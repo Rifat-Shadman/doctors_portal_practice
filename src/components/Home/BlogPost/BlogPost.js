@@ -1,11 +1,11 @@
 import React from 'react';
 
 const BlogPost = (props) => {
-    const {title, description, author, authorImg , date} = props.blog;
+    const {title, description, author, imageURL , date} = props.blog;
     return (
         <div className="card shadow-sm col-md-4 text-center p-2">
             <div className="card-header d-flex  align-items-center">
-                <img className="mx-3" src={authorImg} alt="" width="60"/>
+                <img className="mx-3" src={imageURL} alt="" width="60"/>
                 <div>
                     <h6 className="text-primary">{author}</h6>
                     <p className="m-0">{date}</p>

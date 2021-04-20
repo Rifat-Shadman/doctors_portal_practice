@@ -6,42 +6,38 @@ import { faFacebookF, faInstagram, faGooglePlusG } from '@fortawesome/free-brand
 
 const Footer = () => {
     const noNamed = [
-        {name: "Emergency Dental Care" , link: "/emergency"},
-        {name: "Check Up" , link: "/checkup"},
-        {name: "Treatment of Personal Diseases" , link: "/personal-treatment"},
-        {name: "Tooth Extraction" , link: "/tooth-extract"},
-        {name: "Check Up" , link: "/checkup"},
+        
+        {name: "Blog" , link: ""},
+        {name: "Blog Writing Tutorial" , link: "/personal-treatment"},
+        {name: "Web Article" , link: "/tooth-extract"},
+        {name: "SEO" , link: "/checkup"},
     ]
     const ourAddress = [
         {name: "New York - 101010 Hudson" , link: "//google.com/map"},
         {name: "Yards" , link: "//google.com/map"},
        
     ]
-    const oralHealth = [
-        {name: "Emergency Dental Care" , link: "/emergency"},
-        {name: "Check Up" , link: "/checkup"},
-        {name: "Treatment of Personal Diseases" , link: "/personal-treatment"},
-        {name: "Tooth Extraction" , link: "/tooth-extract"},
-        {name: "Check Up" , link: "/checkup"},
-        {name: "Check Up" , link: "/checkup"},
-        {name: "Check Up" , link: "/checkup"}
+    const BannerMaker = [
+        
+        {name: "Web Banner Writing" , link: "/tooth-extract"},
+        {name: "Inspection" , link: "/checkup"},
+        {name: "inspection" , link: "/checkup"},
+        {name: "inspection" , link: "/checkup"}
     ]
     const services = [
-        {name: "Emergency Dental Care" , link: "/emergency"},
-        {name: "Check Up" , link: "/checkup"},
-        {name: "Treatment of Personal Diseases" , link: "/personal-treatment"},
-        {name: "Tooth Extraction" , link: "/tooth-extract"},
-        {name: "Check Up" , link: "/checkup"},
-        {name: "Check Up" , link: "/checkup"},
+        
+        {name: "Research Paper Writing" , link: "/tooth-extract"},
+        {name: "Paper" , link: "/checkup"},
+        {name: "Profile" , link: "/checkup"},
         {name: "Check Up" , link: "/checkup"}
     ]
     return (
         <footer className="footer-area clear-both">
             <div className="container pt-5">
-                <div className="row py-5">
+                <div className="row py-3">
                     <FooterCol key={1} menuTitle={"."} menuItems={noNamed}/>
                     <FooterCol key={2} menuTitle="Services" menuItems={services}/>
-                    <FooterCol key={3} menuTitle="Oral Health" menuItems={oralHealth}/>
+                    <FooterCol key={3} menuTitle="Banner Maker" menuItems={BannerMaker}/>
                     <FooterCol key={4} menuTitle="Our Address" menuItems={ourAddress}> 
                         <ul className="social-media list-inline">
                             <li className="list-inline-item"><a href="//facebook.com"><FontAwesomeIcon className="icon active-icon" icon={faFacebookF} /></a></li>

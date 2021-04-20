@@ -23,6 +23,6 @@ const BookingCard = ({ booking, date }) => {
             </div>
         </div>
     );
-};
+}; 
 
 export default BookingCard;

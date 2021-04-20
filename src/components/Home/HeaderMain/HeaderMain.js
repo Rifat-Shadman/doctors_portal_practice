@@ -3,15 +3,13 @@ import { Link } from 'react-router-dom';
 import chair from "../../../images/chair.png";
 const HeaderMain = () => {
     return (
-        <main style={{height:'600px'}} className="row d-flex align-items-center">
-            <div className="col-md-4 offset-md-1">
-                <h1 style={{color:'#3A4256'}}>Your new smile <br /> Starts here</h1>
-                <p className="text-secondary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor unde ipsum exercitationem dolorum natus consequatur! </p>
-                <Link to="/appointment"><button className="btn btn-primary">Get Appointment</button></Link>
+        <main style={{height:'400px'}} className="col-md-12 d-flex align-items-center justify-content-center">
+            <div className="justify-content-center">
+                <h1>ContentWR</h1>
+                <p>World's #1 Content Writing Service</p>
+                <Link to="/appointment"><button className="btn btn-primary">Place Order</button></Link>
             </div>
-            <div className="col-md-6">
-                <img src={chair} alt="" className="img-fluid" />
-            </div>
+            
         </main>
     );
 };

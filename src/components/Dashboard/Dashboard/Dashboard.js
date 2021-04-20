@@ -1,10 +1,10 @@
 import React, { useContext, useEffect, useState } from 'react';
-import AppointmentsByDate from '../AppointmentsByDate/AppointmentsByDate';
 import Sidebar from '../Sidebar/Sidebar';
-import Calendar from 'react-calendar';
-import 'react-calendar/dist/Calendar.css';
 import Navbar from '../../Shared/Navbar/Navbar';
-import { UserContext } from '../../../App';
+import { isDoctorContext, UserContext } from '../../../App';
+import OrderListForAdmin from '../OrderListForAdmin/OrderListForAdmin';
+import OrderListForUser from '../OrderListForUser/OrderListForUser';
+
 
 const containerStyle = {
     backgroundColor: "#F4FDFB",
@@ -13,50 +13,38 @@ const containerStyle = {
 
 const Dashboard = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+    const [isDoctor, setIsDoctor] = useContext(isDoctorContext);
     const [selectedDate, setSelectedDate] = useState(new Date());
-    const [appointments, setAppointments] = useState([]);
-    console.log(loggedInUser.email);
+    const [orders, setOrders] = useState([]);
+    console.log(isDoctor);
     const handleDateChange = date => {
-        // console.log(date);
         setSelectedDate(date);
-        // console.log(selectedDate);
-        // fetch('http://localhost:5000/appointmentsByDate', {
-        //     method: 'POST',
-        //     headers: { 'content-type': 'application/json'},
-        //     body: JSON.stringify({date: selectedDate})
-        // })
-        // .then(res=>res.json())
-        // .then(data => {
-        //     setAppointments(data)
-        //     console.log(appointments);
-        // })
     }
 
     useEffect( () => {
-        fetch('http://localhost:5000/appointmentsByDate', {
-            method: 'POST',
-            headers: { 'content-type': 'application/json'},
-            body: JSON.stringify({date: selectedDate, email: loggedInUser.email})
-        })
+        fetch('http://localhost:5000/orders')
         .then(res=>res.json())
-        .then(data => setAppointments(data))
-    }, [selectedDate])
+        .then(data => setOrders(data))
+    }, [])
+
+    console.log(orders);
 
     return (
+        
         <section>
             <Navbar></Navbar>
             <div style={containerStyle} className="container-fluid row">
                 <div className="col-md-2">
                     <Sidebar></Sidebar>
                 </div>
-                <div className="col-md-5 d-flex justify-content-center">
+                {/* <div className="col-md-5 d-flex justify-content-center">
                 <Calendar
                     onChange={handleDateChange}
                     value={new Date()}
                 />
-                </div>
-                <div className="col-md-5">
-                    <AppointmentsByDate appointments={appointments}></AppointmentsByDate>
+                </div> */}
+                <div className="col-md-10">
+                    {isDoctor? <OrderListForAdmin></OrderListForAdmin> : <OrderListForUser></OrderListForUser>}
                 </div>
             </div>
         </section>
